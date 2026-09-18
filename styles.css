@@ -327,6 +327,16 @@ ul {
     border: 1px solid var(--line-strong);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
+    background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(10,16,24,.7));
+}
+
+.profile-card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: calc(var(--radius-lg) - 10px);
+    pointer-events: none;
 }
 
 .profile-photo {
@@ -575,6 +585,9 @@ ul {
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -665,6 +678,9 @@ ul {
 }
 
 .project-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     padding: 22px 22px 24px;
 }
 
@@ -930,6 +946,7 @@ ul {
     background:
         radial-gradient(circle at 88% 0%, rgba(255, 122, 69, .14), transparent 28rem),
         linear-gradient(135deg, rgba(19, 33, 46, .85), rgba(9, 16, 24, .9));
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .22);
 }
 
 .contact-box h2 {
