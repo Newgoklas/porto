@@ -1041,7 +1041,7 @@ ul {
 
 @media (max-width: 720px) {
     .container {
-        width: min(var(--max), calc(100% - 24px));
+        width: min(var(--max), calc(100% - 28px));
     }
 
     .section {
@@ -1049,7 +1049,7 @@ ul {
     }
 
     .hero {
-        padding: 30px 0 48px;
+        padding: 48px 0 64px;
     }
 
     .site-nav {
@@ -1080,32 +1080,13 @@ ul {
     }
 
     .hero-grid {
-        grid-template-columns: minmax(0, 1.1fr) minmax(180px, .9fr);
-        gap: 16px;
-        align-items: center;
-    }
-
-    .hero-copy {
-        min-width: 0;
-    }
-
-    .lead {
-        max-width: none;
-        font-size: 12.5px;
-        line-height: 1.7;
-    }
-
-    .lead:first-of-type {
-        font-size: 13.5px;
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .hero-visual {
         justify-content: center;
         position: static;
-    }
-
-    .profile-card {
-        width: min(100%, 270px);
     }
 
     .hero-stats {
