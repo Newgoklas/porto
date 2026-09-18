@@ -1062,6 +1062,16 @@ ul {
         display: block;
     }
 
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hero-visual {
+        justify-content: center;
+        position: static;
+    }
+
     .hero-stats {
         grid-template-columns: 1fr;
     }
