@@ -110,17 +110,6 @@ ul {
     letter-spacing: -.02em;
 }
 
-.brand-mark {
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 9px;
-    color: #1a0c06;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    font-weight: 700;
-}
-
 .site-nav {
     display: flex;
     align-items: center;
@@ -607,15 +596,19 @@ ul {
     border-bottom: 1px solid var(--line);
 }
 
-.project-media img {
+.project-media img,
+.project-media iframe {
     width: 100%;
     height: 100%;
+    display: block;
+    border: 0;
     object-fit: cover;
     object-position: top center;
     transition: transform .5s ease;
 }
 
-.project-card:hover .project-media img {
+.project-card:hover .project-media img,
+.project-card:hover .project-media iframe {
     transform: scale(1.06);
 }
 
@@ -892,15 +885,17 @@ ul {
 .edu-brand {
     width: 64px;
     height: 64px;
-    border-radius: 14px;
-    border: 1px solid rgba(255, 122, 69, .25);
-    background: linear-gradient(135deg, rgba(255, 122, 69, .18), rgba(255, 122, 69, .02));
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.08);
 }
 
 .edu-brand-image {
     background:
-        linear-gradient(135deg, rgba(255, 122, 69, .18), rgba(255, 122, 69, .02)),
-        url("https://dinus.ac.id/wp-content/uploads/2023/08/Logo-UDINUS-1.png") center/62% no-repeat;
+        radial-gradient(circle at center, rgba(255, 255, 255, 0.12), rgba(0, 0, 0, 0.62)),
+        url("image/logo1.jpeg") center/cover no-repeat;
 }
 
 .education-card h3 {
@@ -1002,8 +997,8 @@ ul {
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 980px) {
     .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 44px;
+        grid-template-columns: minmax(0, 1.1fr) minmax(260px, .9fr);
+        gap: 32px;
     }
 
     .hero-visual {
